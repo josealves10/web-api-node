@@ -1,0 +1,33 @@
+
+<div class="container">
+	<div class="row">
+		<h2>All Locals Storaged</h2>
+	</div>
+	<div class="row" style="margin-left: 9px;">
+		<a href="/dashboard/locals/add" class="btn btn-info btn-md">Add a local</a>
+	</div>
+	<div class="row" style="margin-top: 15px;">
+	  {{#if data}}
+		{{#each data}}
+		<div class="col-md-3" style="padding-bottom: 15px;">
+		<div class="card" style="width: 18rem; margin-left: 5px;">
+		  <div class="card-body">
+		    <h5 class="card-title">{{name}}</h5>
+		    <h6 class="card-subtitle mb-2 text-muted">{{city}}</h6>
+		    <span class="card-text">Tipo: {{type}}</span>	 </br> 
+		    <span class="card-text">Contacto: {{contact}}</span></br>	  
+		    <a href="/dashboard/locals/detail?id={{_id}}" class="btn btn-info -btn-md">Details</a>
+	    	<a href="/dashboard/locals/edit?id={{_id}}" class="btn btn-info -btn-md">Edit</a>
+	    	<a href="/dashboard/locals/delete?id={{_id}}" class="btn btn-info -btn-md">Delete</a>
+		  </div>
+		  </div>
+		</div>
+		{{/each}}
+	{{/if}}
+	</div>
+</div>
+
+		
+
+
+

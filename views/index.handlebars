@@ -1,0 +1,121 @@
+<!-- MAIN CONTENT-->
+            {{#if data}}
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Know & Go - Dashboard</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-shopping-cart"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>{{{data.nLocals}}}</h2>
+                                                <span>Nº de locais armazenados</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-calendar-note"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>{{{data.nAccess}}}</h2>
+                                                <span>Nº de pedidos à API</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-money"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>{{{data.cityAccess}}}</h2>
+                                                <span>Cidade com mais pedidos</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-money"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>{{{data.cityLocal}}}</h2>
+                                                <span>Cidade com mais Locais</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                     </div>
+                     <div class="container">
+                        {{#if data.totalAcessos}}
+                        <div class="row">
+                            <div class="col-lg-4 offset-lg-4">
+                                <h2 class="title-1 m-b-25 text-center">Acessos Diários</h2>
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Data</th>
+                                                <th>Cidade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each data.totalAcessos}}
+                                            <tr>
+                                                <td>{{accessDate}}</td>
+                                                <td>{{city}}</td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            {{else}}
+                            <p>erro</p>
+                            {{/if}}
+                        </div>
+                     </div>
+                 </div>
+             </div>
+             {{else}}
+             <p>erro</p>
+             {{/if}}
+
+<!--<div class="container">
+  <h2>Welcome back {{user.name}}</h2>
+</div>-->

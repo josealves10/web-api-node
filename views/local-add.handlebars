@@ -1,0 +1,55 @@
+<div class="container">
+	<h1>Add new local</h1>
+	<div class="row ">
+		<div class="col-lg-12">
+			<form method="post" action="/dashboard/locals/add">
+			  <div class="form-group">
+			    <label for="name">Name</label>
+			    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="name">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Description</label>
+			    <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
+			  </div>
+		      <div class="form-group">
+		        <label for="inputState">Type</label>
+		        <select id="inputState" name="type" class="form-control">
+		        <option selected>Restaurante</option>
+		        <option>Café</option>
+		        <option>Cultura</option>
+		        <option>Lazer</option>
+		        </select>
+		    </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Latitude</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="latitude" placeholder="41.321122">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Longitude</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="longitude" placeholder="-8.2345">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">City</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="city" placeholder="Guimarães">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Contact</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="contact" placeholder="253123456">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Image URL</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="imageURL" placeholder="paste here url">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Website</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="website" placeholder="google.com">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Cost for Two</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="cost_for_two" placeholder="10">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

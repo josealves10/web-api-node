@@ -1,0 +1,36 @@
+<div class="container">
+	<h1>Add new local</h1>
+	<div class="row ">
+		<div class="col-lg-12">
+			<form method="post" action="/dashboard/users/add">
+			  <div class="form-group">
+			    <label for="name">Name</label>
+			    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="name">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Username</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="username" placeholder="username">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="password" placeholder="first-password: 123">
+			  </div>				  
+		      <div class="form-group">
+		        <label for="inputState">Type</label>
+		        <select id="inputState" name="type" class="form-control">
+		        <option selected>Co-Founder</option>
+		        <option>Software Engineer</option>
+		        <option>Team Manager</option>
+		        <option>Developer</option>
+		        <option>Tester</option>
+		        </select>
+		    </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Description</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="description" placeholder="description">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

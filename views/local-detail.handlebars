@@ -1,0 +1,74 @@
+{{#if data}}
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<h2 style="margin-bottom: 15px;">{{data.name}}</h1>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+	<div class="h-100 row align-items-center">
+		<div class="col">
+  				<img style="display: block; margin-left: auto; margin-right: auto;" width="600" height="400" src="{{data.imageURL}}" alt="">
+	  	</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-lg-12">
+	      <h5 class="mt-5">Description</h5>
+	      <p class="lead">{{data.description}}</p>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="h-100 row align-items-center">
+  		<div class="col-md-12">
+			<div id="map"></div>
+	  	</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+	      <h5 class="mt-5">City</h5>
+	      <p class="lead">{{data.city}}</p>
+		</div>
+		<div class="col-md-4">
+	      <h5 class="mt-5">Type</h5>
+	      <p class="lead">{{data.type}}</p>
+		</div>
+		<div class="col-md-4">
+	      <h5 class="mt-5">Contact</h5>
+	      <p class="lead">{{data.contact}}</p>
+		</div>		
+		<div class="col-md-4">
+	      <h5 class="mt-5">Website</h5>
+	      <p class="lead">{{{data.website}}}</p>
+		</div>
+</div>
+</div>
+
+  <script>
+    var latString = "{{data.latitude}}";
+    var lat = parseFloat(latString);
+    var longi = "{{data.longitude}}";
+    var long = parseFloat(longi);
+
+            function initMap() {
+              var uluru = {lat: lat, lng: long};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+    </script>
+    {{else}}
+    <p>erro</p>
+    {{/if}}
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8orP9I-57XZUfV81o1KQTO4JEoZW-A9Y&callback=initMap">
+    </script> 

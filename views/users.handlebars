@@ -1,0 +1,55 @@
+{{#if data.isCEO}}
+<div class="container">
+	<div class="row">
+		<h2>Company Employees</h2>
+	</div>
+	<div class="row" style="margin-left: 9px;">
+		<a href="/dashboard/users/add" class="btn btn-info btn-md">Add a Employee</a>
+	</div>
+	<div class="row" style="margin-top: 15px;">
+		{{#if data}}
+		{{#each data.users}}
+		<div class="col-md-3" style="padding-bottom: 15px;">
+		<div class="card" style="width: 18rem; margin-left: 5px;">
+		  <div class="card-body">
+		    <h5 class="card-title">{{name}}</h5>
+		    <span class="card-text">Username: {{username}}</span></br>
+		    <span class="card-text">Cargo: {{type}}</span></br>  
+		    <span class="card-text">{{description}}</span></br>
+	    	<a href="/dashboard/users/edit?id={{_id}}" class="btn btn-info -btn-md">Edit</a>
+	    	<a href="/dashboard/users/delete?id={{_id}}" class="btn btn-info -btn-md">Delete</a>
+		  </div>
+		  </div>
+		</div>
+		{{/each}}
+		{{else}}
+		<p>erro</p>
+		{{/if}}
+	</div>
+</div>
+{{else}}
+<div class="container">
+	<div class="row">
+		<h2>Company Employees</h2>
+	</div>
+	<div class="row" style="margin-top: 15px;">
+		{{#if data}}
+		{{#each data.users}}
+		<div class="col-md-3" style="padding-bottom: 15px;">
+		<div class="card" style="width: 18rem; margin-left: 5px;">
+		  <div class="card-body">
+		    <h5 class="card-title">{{name}}</h5>
+		    <span class="card-text">Username: {{username}}</span></br>
+		    <span class="card-text">Cargo: {{type}}</span></br>  
+		    <span class="card-text">{{description}}</span></br>
+		  </div>
+		  </div>
+		</div>
+		{{/each}}
+		{{else}}
+		<p>erro</p>
+		{{/if}}
+	</div>
+</div>
+{{/if}}
+		

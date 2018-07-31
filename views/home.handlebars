@@ -1,0 +1,38 @@
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Know & Go - Web API</h1>
+          <p>This is a web API for my final class, here you can check which locals my Android app consume.</p>
+          <p><a class="btn btn-success btn-lg" href="/view/locals/all" role="button">Check our Locals &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Check all locals</h2>
+            <p>Here you can see all locals from all places that we have stored. Check out and see if your favorite locals are around our database</p>
+            <p><a class="btn btn-success" href="/views/locals/all" role="button">Go &raquo;</a></p>
+          </div>
+          <div class="col-md-6">
+            <h2>Check locals by City</h2>
+            <p>Here you can see what locals we have from your town, dont you wanna find out which locals we think better being here? Go find out! </p>
+            <form class="form-inline" method="post" action="/views/locals/city">
+              <div class="form-group mb-2">
+                <label for="staticEmail2" class="sr-only">City</label>
+                <input type="text" class="form-control-plaintext" name="city" id="staticEmail2" placeholder="Guimarães">
+              </div>
+              <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+            </form>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>

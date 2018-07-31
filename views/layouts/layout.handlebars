@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Know & Go</title>
+		<link rel="stylesheet" href="/css/bootstrap.css"/>
+		<link rel="stylesheet" href="/css/style.css"/>
+
+
+    <style>
+      #map {
+        width: 70%;
+        height: 400px;
+        margin-left: 155px;
+        background-color: grey;
+      }
+    </style>
+
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+	</head>
+	<body>
+    <div id="nav30" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Know & Go</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        {{#if user}}
+        <a class="p-2 text-dark" href="/">Home</a>
+        <a class="p-2 text-dark" href="/dashboard">Dashboard</a>
+        <a class="p-2 text-dark" href="/dashboard/locals">Locals</a>
+        <a class="p-2 text-dark" href="/dashboard/users">Users</a>
+        {{else}}
+        <a class="p-2 text-dark" href="/">Home</a>
+        {{/if}}
+      </nav>
+      {{#if user}}
+      <a class="btn btn-outline-primary" href="/users/logout">Sign Out</a>
+      {{else}}
+      <a class="btn btn-outline-primary" href="/users/login">Sign In</a>
+      {{/if}}
+    </div>
+
+    <main role="main">
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-lg-12">
+            {{#if success_msg}}
+              <div class="alert alert-success">{{success_msg}}</div>
+            {{/if}}
+
+            {{#if error_msg}}
+              <div class="alert alert-danger">{{error_msg}}</div>
+            {{/if}}
+
+            {{#if error}}
+              <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+            {{{body}}}
+          </div>
+        </div>
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+    	 <hr>
+      <p>&copy; ESTG 2018</p>
+    </footer>
+        <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript" href="../../public/js/bootstrap.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	</body>
+</html>

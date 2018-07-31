@@ -1,0 +1,23 @@
+{{#if data}}
+<div class="container">
+	<h1>Edit {{data.name}}</h1>
+	<div class="row ">
+		<div class="col-lg-12">
+			<form method="post" action="/dashboard/users/edit">
+				<input type="text" class="form-control" id="id" aria-describedby="emailHelp" name="id" hidden="true" value="{{data._id}}">
+			  <div class="form-group">
+			    <label for="name">Type</label>
+			    <input type="text" class="form-control" id="type" name="type" aria-describedby="emailHelp" value="{{data.type}}">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Description</label>
+			    <input type="text" class="form-control" id="exampleInputPassword1" name="description" value="{{data.description}}">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+{{else}}
+<p>erro</p>
+{{/if}}
